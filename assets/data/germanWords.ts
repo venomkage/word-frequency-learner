@@ -500,3 +500,5 @@ const germanWords = [
     { id: "499", word: "haus", meaning: "house" },
     { id: "500", word: "schule", meaning: "school" }
 ]
+
+export default germanWords;

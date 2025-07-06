@@ -500,3 +500,4 @@ const italianWords = [
     {id: "499", word: "casa", meaning: "house"},
     {id: "500", word: "scuola", meaning: "school"}
     ]
+export default italianWords;

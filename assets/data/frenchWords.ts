@@ -1,4 +1,4 @@
-[
+const frenchWords = [
     {id: "1", word: "bonjour", meaning: "hello"},
     {id: "2", word: "merci", meaning: "thank you"},
     {id: "3", word: "oui", meaning: "yes"},
@@ -499,4 +499,6 @@
     {id: "498", word: "aller", meaning: "to go"},
     {id: "499", word: "manger", meaning: "to eat"},
     {id: "500", word: "boire", meaning: "to drink"}
-    ]
+    ];
+
+export default frenchWords;

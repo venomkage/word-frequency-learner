@@ -1,4 +1,10 @@
-const chineseWords = [
+const chineseWords:{
+    id: string;
+    word: string;
+    pinyin?: string;
+    romaji?: string;
+    meaning: string;
+}[] = [
     {id: "1", word: "你好", pinyin: "nǐ hǎo", meaning: "hello"},
     {id: "2", word: "谢谢", pinyin: "xièxie", meaning: "thank you"},
     {id: "3", word: "是", pinyin: "shì", meaning: "to be"},
@@ -499,4 +505,6 @@ const chineseWords = [
     {id: "498", word: "老师", pinyin: "lǎoshī", meaning: "teacher"},
     {id: "499", word: "中国", pinyin: "Zhōngguó", meaning: "China"},
     {id: "500", word: "人", pinyin: "rén", meaning: "person"}
-    ]
+    ];
+
+export default chineseWords;

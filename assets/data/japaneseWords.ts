@@ -500,3 +500,5 @@ const japanseWords = [
     {id: "499", word: "ご飯", romaji: "gohan", meaning: "cooked rice, meal"},
     {id: "500", word: "先生", romaji: "sensei", meaning: "teacher"}
     ]
+
+export default japanseWords;

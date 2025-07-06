@@ -1,10 +1,7 @@
 import { Stack } from 'expo-router';
 import React from 'react';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
 
   return (
     <Stack
@@ -19,9 +16,9 @@ export default function TabLayout() {
         }}
       />
       <Stack.Screen
-        name="explore"
+        name="[language]"
         options={{
-          title: 'Explore',
+          title: 'Language',
 
         }}
       />
