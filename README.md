@@ -10,6 +10,21 @@ A mobile application that helps language learners expand their vocabulary by exp
 - Offline functionality using bundled JSON data and local storage
 - Favorites are persisted using AsyncStorage
 
+## 🖼️ Screenshots
+
+### Home Screen
+<img src="./assets/screenshots/home.png" alt="Home Screen" height="300" />
+
+### Word List Screen
+<img src="./assets/screenshots/wordlist.png" alt="Word List Screen" height="300"/>
+
+### Favorites Screen
+<img src="./assets/screenshots/favourites.png" alt="Favorites Screen" height="300"/>
+
+### Flashcards Screen
+<img src="./assets/screenshots/flashcards.png" alt="Flashcards Screen" height="300"/>
+
+
 ## 🧠 Technology Stack
 
 | Tool / Library | Purpose |
