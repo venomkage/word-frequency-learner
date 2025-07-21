@@ -21,7 +21,7 @@ export default function HomeScreen() {
       <View style={{ flex: 1, width: '100%', backgroundColor: Colors.dark.background, padding: 15 }}>
 
 
-        <Text style={styles.sectionTitle}>Choose a language</Text>
+        <Text style={styles.headerTitle}>Choose a language</Text>
 
 
         {/* Tiles 2 columns and so on rows */}
@@ -53,21 +53,6 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-
-  outerSearchBar: {
-    borderWidth: 1,
-    borderColor: Colors.dark.minorColor,
-    backgroundColor: '#2c3035',
-    padding: 10,
-    borderRadius: 8,
-    flexDirection: 'row',
-
-  },
-  searchBar: {
-    color: Colors.dark.minorColor,
-    flex: 1,
-    fontSize: 16,
-  },
   tileWrapper: {
     width: TILE_SIZE,
     height: TILE_SIZE,
@@ -95,7 +80,7 @@ const styles = StyleSheet.create({
     bottom: 10,
     left: 10,
   },
-  sectionTitle: {
+  headerTitle: {
     color: 'white',
     fontSize: 22,
     fontWeight: 'bold',

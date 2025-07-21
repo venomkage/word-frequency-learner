@@ -10,7 +10,7 @@ import {
     StatusBar,
     StyleSheet,
     Text,
-    View,
+    View
 } from 'react-native';
 
 
@@ -33,72 +33,70 @@ export default function FlashcardsScreen() {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" backgroundColor={Colors.dark.background} />
-
-            {/* Header */}
-            <View style={styles.header}>
+            <View style={{ flex: 1, width: '100%', backgroundColor: Colors.dark.background, padding: 15 }}>
                 <Text style={styles.headerTitle}>
                     Flashcards for favourites
                 </Text>
-                <View style={{ width: 24 }} />
-            </View>
 
-            {favorites.length > 0 ? <FlatList
-                getItemLayout={(_, index) => ({
-                    length: width,
-                    offset: width * index,
-                    index,
-                })}
-                initialScrollIndex={currentIndex}
-                data={favorites}
-                ref={flatListRef}
-                horizontal
-                pagingEnabled
-                keyExtractor={(item) => item.word}
-                showsHorizontalScrollIndicator={false}
-                onMomentumScrollEnd={(event) => {
-                    const newIndex = Math.round(event.nativeEvent.contentOffset.x / width);
-                    setCurrentIndex(newIndex);
-                }}
-                renderItem={({ item }) => (
-                    <View style={styles.cardWrapper}>
-                        <Flashcard front={item.word} back={item.meaning} frontHalf={
-                            item.romaji ? item.romaji : item.pinyin ? item.pinyin : ''
-                        } />
-                    </View>
-                )}
-            />
-                : (
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ color: 'white', fontSize: 18 }}>No flashcards available</Text>
-                    </View>
-                )
-            }
 
-            {/* Navigation Buttons */}
-            <View style={styles.buttonRow}>
-                <Pressable
-                    onPress={() => goToIndex(currentIndex - 1)}
-                    disabled={currentIndex === 0}
-                    style={[
-                        styles.navButton,
-                        currentIndex === 0 && styles.navButtonDisabled,
-                    ]}
-                >
-                    <Text style={styles.navButtonText}>Previous</Text>
-                </Pressable>
-                <Text style={styles.progressText}>
-                    {currentIndex + 1} / {favorites.length}
-                </Text>
-                <Pressable
-                    onPress={() => goToIndex(currentIndex + 1)}
-                    disabled={currentIndex === favorites.length - 1}
-                    style={[
-                        styles.navButton,
-                        currentIndex === favorites.length - 1 && styles.navButtonDisabled,
-                    ]}
-                >
-                    <Text style={styles.navButtonText}>Next</Text>
-                </Pressable>
+                {favorites.length > 0 ? <FlatList
+                    getItemLayout={(_, index) => ({
+                        length: width,
+                        offset: width * index,
+                        index,
+                    })}
+                    initialScrollIndex={currentIndex}
+                    data={favorites}
+                    ref={flatListRef}
+                    horizontal
+                    pagingEnabled
+                    keyExtractor={(item) => item.word}
+                    showsHorizontalScrollIndicator={false}
+                    onMomentumScrollEnd={(event) => {
+                        const newIndex = Math.round(event.nativeEvent.contentOffset.x / width);
+                        setCurrentIndex(newIndex);
+                    }}
+                    renderItem={({ item }) => (
+                        <View style={styles.cardWrapper}>
+                            <Flashcard front={item.word} back={item.meaning} frontHalf={
+                                item.romaji ? item.romaji : item.pinyin ? item.pinyin : ''
+                            } />
+                        </View>
+                    )}
+                />
+                    : (
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ color: 'white', fontSize: 18 }}>No flashcards available</Text>
+                        </View>
+                    )
+                }
+
+                {/* Navigation Buttons */}
+                <View style={styles.buttonRow}>
+                    <Pressable
+                        onPress={() => goToIndex(currentIndex - 1)}
+                        disabled={currentIndex === 0}
+                        style={[
+                            styles.navButton,
+                            currentIndex === 0 && styles.navButtonDisabled,
+                        ]}
+                    >
+                        <Text style={styles.navButtonText}>Previous</Text>
+                    </Pressable>
+                    <Text style={styles.progressText}>
+                        {currentIndex + 1} / {favorites.length}
+                    </Text>
+                    <Pressable
+                        onPress={() => goToIndex(currentIndex + 1)}
+                        disabled={currentIndex === favorites.length - 1}
+                        style={[
+                            styles.navButton,
+                            currentIndex === favorites.length - 1 && styles.navButtonDisabled,
+                        ]}
+                    >
+                        <Text style={styles.navButtonText}>Next</Text>
+                    </Pressable>
+                </View>
             </View>
         </SafeAreaView>
     );
@@ -109,21 +107,15 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#111418',
     },
-    header: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: '#111418',
-        paddingHorizontal: 16,
-        paddingVertical: 12,
-        justifyContent: 'space-between',
-    },
     headerTitle: {
         color: 'white',
-        fontSize: 18,
+        fontSize: 22,
         fontWeight: 'bold',
-        textAlign: 'center',
-        flex: 1,
+        paddingHorizontal: 16,
+        paddingTop: 20,
+        paddingBottom: 10,
     },
+
     cardWrapper: {
         width,
         justifyContent: 'center',

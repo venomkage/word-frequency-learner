@@ -8,12 +8,11 @@ export default function FavouritesScreen() {
   const { toggleFavorite } = useFavoriteStore();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: Colors.dark.background }}>
       <StatusBar barStyle="light-content" backgroundColor={Colors.dark.background} />
-
       <View style={{ flex: 1, width: '100%', backgroundColor: Colors.dark.background, padding: 15 }}>
 
-        <Text style={styles.header}>Saved Words</Text>
+        <Text style={styles.headerTitle}>Saved Words</Text>
 
         <FlatList
           data={favouriteWords}
@@ -37,16 +36,13 @@ export default function FavouritesScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Colors.dark.background,
-    padding: 20,
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: 'bold',
+  headerTitle: {
     color: 'white',
-    marginBottom: 20,
+    fontSize: 22,
+    fontWeight: 'bold',
+    paddingHorizontal: 16,
+    paddingTop: 20,
+    paddingBottom: 10,
   },
   item: {
     backgroundColor: '#1c2127',

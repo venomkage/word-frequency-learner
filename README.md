@@ -18,7 +18,7 @@ A mobile application that helps language learners expand their vocabulary by exp
 ### Word List Screen
 <img src="./assets/screenshots/wordlist.png" alt="Word List Screen" height="300"/>
 
-### Favorites Screen
+### Favourites Screen
 <img src="./assets/screenshots/favourites.png" alt="Favorites Screen" height="300"/>
 
 ### Flashcards Screen
