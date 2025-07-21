@@ -1,50 +1,65 @@
-# Welcome to your Expo app 👋
+# Word Frequency Learner
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile application that helps language learners expand their vocabulary by exploring high-frequency word lists, saving favorites, and studying them using flashcards. Built with Expo (React Native), Zustand, and AsyncStorage.
 
-## Get started
+## 📱 Features
 
-1. Install dependencies
+- Select a language to explore its most frequent words
+- View word meanings and mark words as favorites
+- Practice words using an integrated flashcard system
+- Offline functionality using bundled JSON data and local storage
+- Favorites are persisted using AsyncStorage
 
-   ```bash
-   npm install
-   ```
+## 🧠 Technology Stack
 
-2. Start the app
+| Tool / Library | Purpose |
+|----------------|---------|
+| **Expo** | Simplifies React Native development and deployment |
+| **Zustand** | Lightweight global state management |
+| **AsyncStorage** | Local persistence for favorites |
+| **React Navigation** | Tab-based and stack navigation |
+| **JSON Data** | Bundled frequency word lists for offline access |
 
-   ```bash
-   npx expo start
-   ```
+## 📦 Installation
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+> Prerequisite: [Node.js](https://nodejs.org/) and [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/word-frequency-learner.git
+cd word-frequency-learner
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 Running the App
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Scan the QR code using the Expo Go app on your Android or iOS device.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🧪 Manual Test Cases
 
-## Join the community
+| Test Case | Steps | Expected Result |
+|-----------|-------|-----------------|
+| Select a language | Open the app → Tap on a language | Word list for selected language loads |
+| Mark a word as favorite | Tap the star icon on a word | Word is added to Favorites screen |
+| Unmark a favorite | Tap the star again | Word is removed from Favorites |
+| View favorites | Tap on the Favorites tab | All starred words are shown |
+| Use flashcards | Tap Flashcards tab → Choose mode | Flashcards load and flip on tap |
+| Persist favorites | Restart app after saving words | Favorites remain after restart |
 
-Join our community of developers creating universal apps.
+## 📁 Project Structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+/app                  → Expo Router pages (screens)
+/components           → Shared UI components
+/data                 → Bundled JSON word lists
+/store                → Zustand state stores
+/assets               → App icons, images
+README.md             → You’re reading it
+```
+
+## 📝 License
+
+This project was developed as part of a university portfolio course. Not licensed for commercial use.
